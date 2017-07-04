@@ -63,7 +63,6 @@ void encode(char *dist, int c, char **mau){
 	}
 
 	sprintf(dist, "%s%s%s%s%s%s%s%s", mau[bits[0]], mau[bits[1]], mau[bits[2]], mau[bits[3]], mau[bits[4]], mau[bits[5]], mau[bits[6]], mau[bits[7]]);
-	//printf("%s%s%s%s%s%s%s%s", mau[bits[0]], mau[bits[1]], mau[bits[2]], mau[bits[3]], mau[bits[4]], mau[bits[5]], mau[bits[6]], mau[bits[7]]);
 
 	return ;
 }
