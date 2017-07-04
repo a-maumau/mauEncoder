@@ -2,9 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define UTF8_MA -66
-#define UTF8_U -122
-
 //TYPE_NUM must be end of the list
 enum TYPE {ARGERROR=-1, ENCODE_CONS, ENCODE_FILE, DECODE_CONS, DECODE_FILE, TYPE_NUM};
 //めんどいから実際には環境依存
