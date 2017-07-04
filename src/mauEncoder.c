@@ -7,6 +7,7 @@ enum TYPE {ARGERROR=-1, ENCODE_CONS, ENCODE_FILE, DECODE_CONS, DECODE_FILE, TYPE
 //めんどいから実際には環境依存
 enum CODE_TYPE{UTF8};
 /*
+"ま", "う"
 UTF-8 : 3byte per char
 */
 
@@ -104,7 +105,7 @@ int utf_char_byte_len(char c)
 	0xe0 -> 0xef : start of 3bytes char
 	0xf0 -> 0xff : start of 4bytes char
 	バイトごとに別々に分けて出力するとうまくいかない
-	%s だと途中でぶった切られてもうまくいくようだが　%c　でバイトごとはどうやら個別に解釈されるので
+	%s だと途中でぶった切られてもうまくいくようだが　%c　ではバイトごとにどうやら個別に解釈されるので
 	ASCIIの謎の文字になるっぽい。
 
 	処理系依存になりそうだが、引き算で求めることにする。
