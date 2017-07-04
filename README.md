@@ -19,4 +19,4 @@ $ ./mauEncoder -d -f test2.txt
 ```
 
 # License
-MIT License
+[MIT License](https://opensource.org/licenses/MIT)
