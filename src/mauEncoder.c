@@ -8,12 +8,18 @@ enum TYPE {ARGERROR=-1, ENCODE_CONS, ENCODE_FILE, DECODE_CONS, DECODE_FILE, TYPE
 enum CODE_TYPE{UTF8};
 /*
 "ま", "う"
-UTF-8 : 3byte per char
+UTF-8 : 3bytes per char.
 */
 
 void print_usage(void)
 {
 	printf("USAGE: option[ decode : -d, from file : -f ] input[ console input, file path]\n");
+	printf("encode     : ./mauEncoder a\n");
+	printf("using file : ./mauEncoder -f input.txt\n");
+	printf("decode     : ./mauEncoder -d まううままままう\n");
+	printf("using file : ./mauEncoder -d -f input.txt\n");
+
+	return ;
 }
 
 int parse(int arg_num, char *arg_str[])
@@ -53,7 +59,6 @@ int parse(int arg_num, char *arg_str[])
 
 }
 
-//配列の要素チェックはしてないので自分で考えて！！！
 void encode(char *dist, int c, char **mau){
 	char bits[8];
 	int lev;
